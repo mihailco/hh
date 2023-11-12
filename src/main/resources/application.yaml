@@ -1,6 +1,25 @@
+datasource:
+  hh:
+    pool-name: hh
+    jdbcUrl: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    password: postgrespw
+    username: postgres
+
 spring:
+  flyway:
+    enabled: true
+
   jpa:
-    hibernate:
-      ddl-auto: update
-  datasource:
-    url: jdbc:h2:file:./data/home-service
+#    generate-ddl: on
+    show-sql: true
+
+#    hibernate:
+#      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
